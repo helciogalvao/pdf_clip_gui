@@ -1,0 +1,16 @@
+# Rust
+/target
+**/*.rs.bk
+
+# IDEs/editors
+/.idea
+*.swp
+*.swo
+.vscode/
+
+# Logs
+*.log
+
+# Backup
+*~
+
