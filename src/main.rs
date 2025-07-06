@@ -1,10 +1,13 @@
 use eframe::egui;
+use eframe::egui::ViewportBuilder;
 use std::process::{Command, Stdio};
-use std::io::{self, Write};
+use std::io;
 
 fn main() -> Result<(), eframe::Error> {
     let options = eframe::NativeOptions {
-        initial_window_size: Some(egui::vec2(400.0, 180.0)),
+        viewport: ViewportBuilder::default()
+            .with_inner_size([400.0, 180.0])
+            .with_title("Copiar página PDF"),
         ..Default::default()
     };
     eframe::run_native("Copiar página PDF", options, Box::new(|_cc| Box::<MyApp>::default()))
